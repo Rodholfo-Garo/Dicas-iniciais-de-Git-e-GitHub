@@ -66,7 +66,6 @@ Para reinserir as informações tire o --unset e insira a nova, ex:git config --
 
 **Criando um repositorio pelo terminal
 
-
 1ª Abrir o Git bash e Criar uma pasta -> mkdir + nome da pasta nova
 
 2ªIniciar o GIT dentro da pasta -> usar git init para poder inicializa-lo e possibilitar que o git comoce de fato a gerenciar e versionar o nosso código ( a pasta não aparece, ela é oculta, é uma pasta gerencial do Git, onde fica o código do git, onde ele versiona) para vizualizar ela tem que usar uma flag especifica no comando ls que é a flag -a, ela mostra arquivos ocultos
@@ -94,3 +93,42 @@ Vamos supor que a pesso "A" continuopu e empurrou o codigo para o github novamen
 Então, agora, o codigo que estava no github é o q estava na mauina da pessoa "A" e o seu codigo esta desatualizado.
 
 Para fazer isso o github vai informar que o seu codigo (pessoa "B") esta desatualizado, ele vai pedir para puxar a versão mais recente ( atualizada pela pesso "A") fazer as alterações, juntar oq vc fez, e empurrar para o git de volta. É neste momento que acontece o conflito de "Merge" quando o github tenta juntar o codigo e existe duas alterações na mesma linha
+
+# Criar uma nova Branch e fazendo um Merge no GitHub
+
+## Criando uma nova Branch
+
+Branch é uma Ramificação, no controle de versão e gerenciamento de configuração de software, é a duplicação de um objeto sob controle de versão. Cada objeto pode ser modificado separadamente e em paralelo para que os objetos se tornem diferentes. Nesse contexto, os objetos são chamados de branches. Elas são necessarias quando se esta em um projeto grande e cada equipe é responsavel por uma parte do projeto, então, cada equipe vai ter a sua Branch, quando todos estiverem terminado as alterações nós colocamos as alterações nesta branch e as juntamos na branch principal (Master) fazendo um Merge com a branch princpal com as mudanças que foram feitas.
+
+Comando para criar ma nova Branch:
+
+`git check out -b branch-nome da nova branch`
+
+Para fazer o commit das alteração na nova Branch, basta fazer um push para o novo endereço:
+
+`git pusch origen nome da nova branch`
+
+Para inserir as alterações feitas na Branch master, temos que fazer um Merge.
+
+## Criando uma nova Merge
+
+Merge é Fusão ou mesclagem, ou em inglês merge, no controle de versão, é uma operação fundamental que concilia várias alterações feitas a uma coleção de arquivos controlada por versão. Na maioria das vezes, é necessária quando um arquivo é modificado por duas pessoas em dois computadores diferentes.
+
+No terminal, va para dentro da branch master com o comando
+
+`git checkout master`
+
+Agora temos que fazer um Marge da branch que criamos para dentro da branch master:
+
+`git merge branch-nome da nova branch`
+
+Ele vai mostras as alterações feitas. Estas alterações estão localmente, para atualizar a master temos que atualizar dando o commit e fazendo o push para a branch master.
+
+`git push origen master`
+
+
+
+
+
+
+
