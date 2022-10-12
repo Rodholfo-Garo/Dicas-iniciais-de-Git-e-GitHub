@@ -35,7 +35,7 @@ no Windows
  - cd .. -> volta um diretório (pasta)
 
 Quando estamos lidando com um terminal sempre coloca o nome do programa na frente cd. 
-
+ - vim - É um editor de texto que ja instalado no GIT.
  - dir ou ls -> Lista repositórios na pasta onde estamos
  - mkdir -> criar diretórios (pasta), após digitar mkdir de espaço e digite um nome para seu diretório.
  - del/rmdir -> deletar
